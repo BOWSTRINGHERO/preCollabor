@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+    <!-- 마우스 모양 팝콘으로 변경-->
+<html lang="en" style="cursor: url(커서팝콘.png), auto;">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> <!--swiper css-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- 푸터 아이콘 css-->
+    <link rel="stylesheet" href="Mainpage.css">
+    <link rel="stylesheet" href="Mainpage_Nav.css">
+    <!-- 검색창 JS & CSS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="Mainpage_Search.css">
+    <!-- 마우스 -->
+    <script src="Mouse.js"></script>
+
+    <style>
+        
+        /* 스크롤바 디자인 변경 */
+        /* width */
+        ::-webkit-scrollbar {
+        width: 9px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px #2e3133;
+            border-radius: 7px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #fff49f;
+        border-radius: 7px;
+        }
+
+
+    </style>
+    </head>
+
+    <body>
+
+<!-- 헤더 -->
+    <div class="mainmain">
+    <span id="header">
+        <img class="logo" src="팝콘.PNG" width="200" height="150" >
+    </span>
+
+<!-- 메뉴 및 풀다운 -->
+    <span id="menu">
+        <ul class="main1">
+            <li style="border: none;"><a href="#"><b style="font-size: 20px;"><span style="font-size: 20px;">≡</span> Home</b></a>
+                <ul class="main2">
+                <li><a href="#">이용권 정보</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">고객센터</a></li>
+                </ul>
+            </li>
+            <li><a href="#">영화</a>
+                <ul class="main2">
+                    <li><a href="#">로맨스</a></li>
+                    <li><a href="#">코미디</a></li>
+                    <li><a href="#">액션</a></li>
+                    <li><a href="#">스릴러 & 호러</a></li>
+                    <li><a href="#">SF & 판타지</a></li>
+                    </ul>
+            </li>
+            <li><a href="#">드라마</a>
+                <ul class="main2">
+                    <li><a href="#">로맨스</a></li>
+                    <li><a href="#">시트콤 & 코미디</a></li>
+                    <li><a href="#">스릴러</a></li>
+                    <li><a href="#">SF & 판타지</a></li>
+                    <li><a href="#">웹드라마</a></li>
+                    </ul>
+            </li>
+            <li><a href="#">애니메이션</a></li>
+            <li><a href="#">TOP 10</a></li>
+            <li><a href="#">MY</a></li>
+            <li style="border: none;"><a href="#">실시간 스트리밍</a></li>
+            </ul>
+        </span>
+
+        <!-- 검색창 -->
+        <div id="body-search">
+            <div class="main-search">
+                <div class="search">
+                    <input type="text" class="s_input" onkeypress="if( event.keyCode == 13 ){enterKey();}" />
+                    <button class="btn"><img src="검색돋보기.png" style="width: 90%; right:50%; top:50%;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <script src="검색.js"></script>
+                </form>
+    
+                <!-- 검색 결과 실행 -->
+                <script>
+                    function enterKey() {
+                        swal("검색 결과가 없습니다.");
+                    }
+                </script>
+            </div>
+        </div>
+
+<!-- 메인 상단 슬라이드-->
+    <div id="DH_font"><h1>" 금주의 추천 고전 명작 "</h1></div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="#"><img src="위대한개츠비.jpg" class="movie_image" /></a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="티파니에서아침을.jpg" class="movie_image" /></a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="7년만의외출.jpg" class="movie_image" /></a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="포레스트검프.jpg" class="movie_image" /></a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="타이타닉.jpg" class="movie_image"/></a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="사이코.jpg" class="movie_image"/></a>
+        </div>
+        </div>
+        <!-- 이미지 밑에 버튼은 주석처리함 -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <div id="HN_font"><h2>POP에서 추천하는 장르별 컨텐츠 모음 (✿◖◡​◗)❤</h2></div> <br><br>
+<!-- 메인 본문슬라이드 -->
+        <div id="DH_font"><h1># TOP 10 !</h1></div>
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+        pagination-type="fraction" navigation="true">
+            <swiper-slide><a href="https://naver.com"><img src="나인.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="비밀의숲.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="나인.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="시그널.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="시그널.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="시그널.jpg"></a></swiper-slide>
+        </swiper-container>
+
+
+        <div id="DH_font"><h1># 로맨스 및 코미디</h1></div>
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+        pagination-type="fraction" navigation="true">
+            <swiper-slide><a href="https://naver.com"><img src="Movie_photo/로맨스1.jpeg" ></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/로맨스2.jpeg" ></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/로맨스3.jpg" ></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/로맨스4.jpg" ></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/로맨스5.jpg" ></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/로맨스6.jpg" ></a></swiper-slide>
+        </swiper-container>
+
+        <div id="DH_font"><h1># 스릴러 및 공포</h1></div>
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+            pagination-type="fraction" navigation="true">
+            <swiper-slide><a href="https://naver.com"><img src="Movie_photo/스릴러1.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/스릴러2.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/스릴러3.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/스릴러4.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/스릴러5.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/스릴러6.jpg"></a></swiper-slide>
+        </swiper-container>
+
+        <div id="DH_font"><h1># SF & 판타지</h1></div>
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+        pagination-type="fraction" navigation="true">
+            <swiper-slide><a href="https://naver.com"><img src="Movie_photo/판타지6.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/판타지1.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/판타지2.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/판타지3.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/판타지4.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/판타지5.jpg"></a></swiper-slide>
+        </swiper-container>
+        
+        <div id="DH_font"><h1># 액션</h1></div>
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+        pagination-type="fraction" navigation="true">
+            <swiper-slide><a href="https://naver.com"><img src="Movie_photo/액션3.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/액션1.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/액션2.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/액션6.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/액션4.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/액션5.jpg"></a></swiper-slide>
+        </swiper-container>
+
+        <div id="DH_font"><h1>애니메이션</h1></div>
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+        pagination-type="fraction" navigation="true">
+            <swiper-slide><a href="https://naver.com"><img src="Movie_photo/애니1.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/애니2.png"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/애니3.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/애니4.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/애니5.jpg"></a></swiper-slide>
+            <swiper-slide><a href="#"><img src="Movie_photo/애니6.jpg"></a></swiper-slide>
+        </swiper-container>
+
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer-m">
+                <h4>질문이 있으신가요?<br>
+                    문의 전화: 123-456-7890</h4>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">투자 정보</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">속도 테스트</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#">고객 센터</a></li>
+                            <li><a href="#">입사 정보</a></li>
+                            <li><a href="#">쿠키 설정</a></li>
+                            <li><a href="#">법적 고지</a></li>
+                        </ul>
+                    </div><div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#">계정</a></li>
+                            <li><a href="#">회사 정보</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </div><div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-m">
+                    <h4>대표: 팝콘팀<br>
+                        팝콘서비시스코리아 유한회사 통신판매업신고번호: 제2023-서울마포-301호 전화번호: 123-456-7890<br>
+                        이메일 주소: pop_corn@naver.com<br>
+                        주소: 대한민국 서울특별시 마포구 양화로 12길 23<br>
+                        사업자등록번호: 000-00-0000
+                    </h4>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- 하단 J쿼리 & JS파일 연결 -->
+
+    <!-- 메인상단슬라이드JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- 메인상단슬라이드추가 JS -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        });
+    </script>
+    <!-- 메인본문슬라이드JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    </body>
+
+    </html>

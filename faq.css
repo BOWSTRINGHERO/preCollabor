@@ -1,0 +1,51 @@
+.faq-box {
+    background-color:#2e3133;
+    color: inherit;
+    padding:10px;
+  }
+
+  .faq-main {
+    color: rgb(220, 220, 220);
+    font-weight: bold;
+    font-size: 25px; 
+  }
+
+  .faq-box__question {
+    cursor:pointer;
+    color: rgb(220, 220, 220);
+    font-weight: bold;
+    font-size: 25px; 
+  }
+  
+  .faq-box__question::after {
+    content:"▼";
+    float:right;
+  }
+  
+  .faq-box > ul > li {
+    padding:10px;
+  }
+  
+  .faq-box > ul > li.hover > .faq-box__question::after {
+    content:"▲";
+  }
+  
+  .faq-box__answer {
+    display:none;
+    background-color:#2e3133;
+    color: rgb(177, 177, 177);
+    border-radius:10px;
+    padding:10px;
+  }
+
+  /* 푸터 css */
+  .footer-m h4{
+    font-size: 14px;
+    color: #bbbbbb;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    }

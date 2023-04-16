@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    margin: 150px;
+    background-color: black;  
+}
+
+.login-form {
+    width: 400px;
+    height: 600px;
+    border: 0;
+    background-color: #2e3133;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.text-box {
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    padding: 10px;
+    width: 100%;
+}
+
+.submit-b {
+    background-color: lightpink;
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    width:100%;
+}
+
+.link1 {
+    text-align: center;
+}
+.link1 a {
+    font-size: 12px;
+    color: lightpink;
+    text-decoration-line: none;
+}
+
+h1, h5 {
+    color: white;
+}

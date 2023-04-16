@@ -1,0 +1,114 @@
+* {
+    list-style: none;
+}
+
+@media screen and (min-width:960px) and (max-width:1920px) {
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#header { margin-left: 60px;
+padding: 0%;
+position: relative;
+}
+
+#menu {
+    position: fixed;
+    /* 아래 두줄 네비 중앙 정렬 */
+    left: 50%;
+    transform: translateX( -50% );
+    z-index: 99;
+    height: 50px;
+    text-align: center;
+    float: right;
+    width: 1280px;
+    max-width: 100%;
+}
+
+[class*="main"] {
+    background-color: #2e3133;
+    border-radius: 5px 5px 5px 5px;
+}
+
+[class*="main"] ul {
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #2e3133;
+}
+
+.main1 {
+    padding-left: 0px;
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.main1>li {
+    float: left;
+    width: 13%;
+    line-height: 50px;
+    position: relative;
+}
+
+.main1>li:hover .main2 {
+    left: 0;
+}
+
+.main1>li a {
+    display: block;
+}
+
+.main1>li a:hover {
+    font-weight: bold;
+}
+
+.main2 {
+    width: 110%;
+    position: absolute;
+    top: 50px;
+    left: -9999px;
+    width: 100%;
+    padding: 0px;
+}
+
+.main1>li:hover {
+    border-bottom: 5px solid #fff8c6;
+}
+
+.main2 li:hover {
+    border-left: 5px solid #fff8c6;
+}
+
+.main2>li {
+    position: relative;
+}
+
+.main2>li:hover .main3 {
+    left: 100%;
+}
+
+.main2>li a,
+.main3>li a {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.main3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: -9999px;
+    padding: 0px;
+}
+
+.main3>li a:hover {
+    color: #fff;
+}
+
+nav {
+    margin-top: 20px;
+}

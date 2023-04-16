@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.main-search {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* 바꾸면 마우스 크기 변화 */
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.search {
+    position: absolute;
+    height: 50px;
+    top: 10px;
+    right: 50px;
+}
+
+.search .s_input {
+    background-color: #2E3133;
+    border: 0;
+    font-size: 14px;
+    color: white;
+    padding: 15px;
+    height: 30px;
+    width: 50px;
+    transition: width 0.3s ease;
+    border-radius: 50%;
+}
+
+.btn {
+    background-color: #2E3133;
+    border: 0;
+    cursor: pointer;
+    font-size: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.btn:focus,
+.s_input:focus {
+    outline: none;
+}
+
+.search.active .s_input {
+    width: 200px;
+    border-radius: 0%;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+    border-radius: 0%;
+}
